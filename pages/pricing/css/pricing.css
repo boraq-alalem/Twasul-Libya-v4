@@ -1,0 +1,325 @@
+:root {
+    --main-bg: #37517e;
+    --main-txt: #fff;
+    --active-bg: #263756;
+    --active-txt: #0d6efd;
+    --dark-bg: #1e1c20;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* start landing */
+.landing {
+    height: 80vh;
+    background: var(--main-bg);
+}
+
+.landing .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.landing .container .row {
+    align-items: center;
+    text-align: right;
+}
+
+.landing .container .row .info h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.landing .container .row .info p {
+    color: #eee;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+@media (max-width:767px) {
+    .landing .row {
+        justify-content: center;
+        text-align: center !important;
+        height: 90%;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .landing .row .image {
+        margin-top: -20px;
+    }
+
+    .landing .container .row .info h2 {
+        font-size: 2.1rem;
+    }
+
+    .landing .container .row .info p {
+        font-size: 1rem;
+    }
+}
+
+/* end landing */
+
+/* start tools */
+.tools {
+    background: var(--main-bg);
+}
+
+.tools .container .row .card {
+    background: var(--main-bg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    border: none;
+    padding: 0;
+    padding: 2px;
+    max-width: 280px;
+}
+
+@media (max-width:767px) {
+    .tools .container .row .card .title{
+        font-size: 22px;
+    }
+
+}
+@media (max-width:560px) {
+    .tools .container .row .card {
+        width: 300px;
+    }
+}
+
+.tools .row .card .price-title {
+    width: 100%;
+    box-shadow: -1px 6px 18px 0px black inset;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    padding-bottom: 15px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 100% 55%, 50% 100%, 10% 65%, 0 55%);
+    margin: auto;
+    position: relative;
+}
+
+.tools .row .card .price-title::before,
+.tools .row .card .price-title::after {
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    top: 85%;
+    box-shadow: 20px -17px 30px 9px black;
+}
+
+.tools .row .card .price-title::before {
+    left: -49px;
+    transform: rotate(42deg);
+}
+
+.tools .row .card .price-title::after {
+    right: -49px;
+    transform: rotate(-42deg);
+}
+
+.tools .row .card .price-title .price {
+    position: relative;
+    font-size: 30px;
+}
+
+.tools .row .card .price-title .price span {
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    font-size: 15px;
+}
+
+
+
+
+.tools .row .card .body {
+    min-height: 350px;
+    transform: translateY(-70px);
+    clip-path: polygon(0 0, 1% 0, 50% 23%, 99% 0, 100% 0, 100% 100%, 0 100%);
+    position: relative;
+    background: rgba(0, 0, 0, 0.479);
+    box-shadow: 0px -20px 18px 0px black inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.tools .row .card .body::before {
+    content: '';
+    position: absolute;
+    top: 13%;
+    left: -18%;
+    transform: rotate(38deg);
+    width: 90%;
+    height: 0px;
+    box-shadow: -14px 20px 30px 4px black;
+}
+
+.tools .row .card .body::after {
+    content: '';
+    position: absolute;
+    top: 13%;
+    right: -18%;
+    transform: rotate(-38deg);
+    width: 90%;
+    height: 0px;
+    box-shadow: -14px 20px 30px 4px black;
+}
+
+.tools .row .body .description {
+    width: 100%;
+}
+.tools .row .body .description ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 10px 10px 0;
+    margin-top: 50px;
+    display: grid;
+    gap: 15px;
+}
+
+.tools .row .body .detials ul li {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 10px;
+    border-right: 2px solid #fff;
+    padding: 3px;
+    padding: 10px 20px;
+    padding-right: 5px;
+    box-shadow: 0 0 10px var(--dark-bg);
+    font-size: 0.85rem;
+}
+
+.tools .hero-figure {
+    margin-top: 100px;
+    position: absolute;
+    left: 0;
+}
+
+/* end tools */
+
+
+/* start unlimited-table */
+
+.unlimited-table {
+    background: var(--dark-bg);
+    padding: 40px;
+}
+
+.unlimited-table .container .container-cards .card {
+    background: var(--dark-bg);
+    padding: 25px 0px;
+    text-align: center;
+    color: #777;
+    /* color: var(--main-txt); */
+    max-width: 330px;
+    border-radius: 0;
+    box-sizing: border-box !important;
+    border: 2px solid var(--dark-bg);
+    box-shadow: 0 0 20px black;
+}
+
+@media (max-width:570px) {
+    .unlimited-table .container .container-cards .card {
+        width: 300px;
+    }
+}
+
+.unlimited-table .container .container-cards .card .title {
+    font-size: 30px;
+    color: var(--main-txt);
+    color: #293956;
+
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.unlimited-table .container .container-cards .card .price {
+    background: #1a181b;
+    /* background: var(--active-bg); */
+    padding: 20px 10px;
+    margin: 30px 0;
+
+}
+
+.unlimited-table .container .container-cards .card .price .number {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.unlimited-table .container .container-cards .card .price .number::before {
+    content: 'LYD';
+    font-size: 21px;
+    position: absolute;
+    top: 5px;
+    left: -45px;
+}
+
+.unlimited-table .container .container-cards .card .price span {
+    margin-top: -10px;
+    display: block;
+}
+
+.unlimited-table .container .container-cards .card .detials ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.unlimited-table .container .container-cards .card .detials ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 15px;
+    justify-content: space-around;
+    font-weight: bold;
+    align-items: center;
+    padding: 10px 0;
+    /* border-bottom: solid 2px white;
+    border-top: 2px solid white; */
+}
+
+/* end unlimited-table */
+
+
+
+/* start animation */
+
+img {
+    transform: translateY(0);
+    animation: 3s landing-img linear alternate infinite;
+}
+
+@keyframes landing-img {
+
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* end animation */
